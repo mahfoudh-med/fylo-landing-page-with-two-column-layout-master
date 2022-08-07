@@ -1,0 +1,293 @@
+
+/* ----------global Rules------------  */
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+}
+body{
+font-size:16px;
+line-height: 1.4;
+font-family: 'Open Sans', sans-serif;
+}
+@media (max-width:767px){
+html,
+body{
+font-size:11px;
+}
+}
+header,h1,h2,h3,h4,h5{
+font-family: 'Raleway', sans-serif;
+}
+.container{
+margin-left:auto;
+margin-right:auto;
+padding-left:15px;
+padding-right:15px;
+}
+@media (min-width:767px){
+.container{
+width:750px;
+}
+body{
+font-size:10px;
+
+}
+}
+@media (min-width:991){
+.container{
+width:970px;
+}}
+@media (min-width:1200px){
+.container{
+width:1170px;
+}}
+@media (min-width:1440px){
+.container{
+width:1410px;
+}}
+/* ----------global Rules------------  */
+header .container{
+display:flex;
+justify-content: space-between;
+align-items:center;
+height:100px;
+}
+header .container .logo img{
+height:30px;
+}
+header .container nav{
+display:flex;
+}
+header .container nav a{
+display: block;
+text-decoration: none;
+padding-left: 25px;
+color:black;
+font-size: 1rem;
+}
+header .container nav a:hover{
+color:hsl(238, 22%, 44%);
+}
+/* ---------------section ----------------------*/
+section{
+position:relative;
+padding-top:100px;
+padding-bottom:100px;
+}
+section .container{
+display:flex;
+justify-content: space-between;
+align-items:center;
+}
+@media (max-width:767px){
+section .container{
+flex-direction: column;
+}}
+section .container >div:first-child{
+width: 54%;
+}
+@media (max-width:767px){
+section .container >div:first-child{
+width:100%;
+text-align: center;
+margin-top: 25px;
+order:1;
+}}
+section .container h1{
+font-weight:700;
+font-size:2.3rem;
+}
+section .container p{
+font-size:1rem;
+margin: 15px 0 40px;
+line-height: 1.6;
+max-width: 520px;
+}
+section .container form{
+display:flex;
+flex-wrap: wrap;
+gap:15px;
+}
+
+section .container input[type="email"]{
+padding:10px;
+width:50%;
+}
+section .container input[type="email"]::placeholder{
+font-size:0.8rem;
+}
+section .container input[type="submit"]{
+color:white;
+padding:10px 50px;
+background-color:hsl(224, 93%, 58%);
+font-size:0.8rem;
+border:none;
+}
+@media (max-width:767px){
+section .container input[type="email"]{
+width:100%;
+}
+section .container input[type="submit"]{
+width:100%;
+}
+}
+section .container .image{
+background-image:url(../images/bg-curve-desktop.svg);
+background-size:cover;
+flex:1;
+margin-left:50px;
+}
+@media (max-width:767px){
+section .container .image{
+background-image:url(../images/bg-curve-mobile.svg);
+}
+}
+section .container .image img{
+max-width:100%;
+}
+/*----------- team--------------------  */
+section.team{
+
+border-top-left-radius: 100% 10%;
+border-top-right-radius: 100% 10%;
+position:relative;
+z-index:2;
+overflow: hidden;
+}
+section.team::before{
+content:"";
+position:absolute;
+height:calc(100% + 100px);
+width:200%;
+margin:-100px -50% 0;
+background-color: hsl(240, 75%, 98%);
+z-index:-1;
+border-radius:90% 90% 0 0;
+}
+section.team a{
+color:hsl(170, 45%, 43%);
+text-decoration: none;
+position:relative;
+border-bottom:2px solid hsl(170, 45%, 43%);
+padding-right:30px;
+font-size: 1rem;
+}
+section.team a::before{
+font-family: "font awesome 6 free";
+content:"\f35a";
+font-weight:bold;
+position:absolute;
+color:hsl(170, 45%, 43%) ;
+right:0;
+
+}
+section .testimonial{
+width: 300px;
+font-size: 0.8rem;
+padding:20px;
+line-height: 1.5;
+background-color: white;
+margin:25px 0;
+border-radius:5px;
+}
+@media (max-width:767px){
+section .testimonial{
+margin:25px auto;
+text-align: left;
+}
+}
+section .testimonial span{
+margin: 15px 0;
+display: block;
+}
+section .testimonial .profile{
+display:flex;
+align-items:center;
+gap:10px;
+margin:15px 0;
+}
+section .testimonial .profile img{
+border-radius:50%;
+width:30px;
+}
+
+section .testimonial .profile .info h4{
+font-weight: 600;
+font-size: 0.9rem;
+}
+section .testimonial .profile .info span{
+font-size: 0.8rem;
+}
+/* Sing-in------------------------------ */
+section.sign-in{
+padding-top:80px;
+padding-bottom:80px;
+background-color:hsl(238, 22%, 44%) ;}
+section.sign-in .container form{
+flex-wrap:wrap;
+}
+section.sign-in >div{
+color:hsl(240, 75%, 98%);
+}
+section.sign-in > div h1{
+font-size: 2.2rem;
+}
+section.sign-in .container form input[type="email"]{
+width:100%;
+border:none;
+}
+/* Footer ------------------------------- */
+footer{
+background-color: hsl(243, 87%, 12%);
+padding-top:80px;
+padding-bottom:80px;
+color:hsl(240, 75%, 98%);
+}
+footer .container .content{
+display:grid;
+grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+column-gap: 100px;
+row-gap: 25px;
+margin-top:15px;
+}
+
+footer .container .content >div .contact-us{
+display:flex;
+gap:10px;
+padding:10px 0;
+}
+footer .container .content >div .contact-us img{
+height:15px;
+}
+footer .container .content >div .contact-us span{
+font-size:1rem;
+}
+footer .container .content >ul{
+list-style: none;
+display:flex;
+flex-direction:column;
+}
+footer .container .content >ul li{
+font-size: 1rem;
+padding:10px;
+}
+footer .container .content >ul li a{
+display:block;
+text-decoration: none;
+color:hsl(240, 75%, 98%);
+}
+footer .container .social{
+display:flex;
+margin:auto;
+}
+footer .container .social a{
+color:hsl(240, 75%, 98%);
+
+}
+footer .container .social a i{
+margin-right:10px;
+padding:5px;
+border:1px solid hsl(240, 75%, 98%);
+border-radius:50%;
+}
